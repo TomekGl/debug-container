@@ -1,6 +1,7 @@
+FROM alpine:3.19
+
 ARG GIT_TAG
 
-ENV BASE_REV=3.19
 ENV RELEASE=${GIT_TAG}
 
 LABEL maintainer="Tomasz Głuch <git@tomaszgluch.pl>"
@@ -10,7 +11,6 @@ LABEL org.opencontainers.image.description="Debug tools for troubleshooting cont
 LABEL org.opencontainers.image.version=${GIT_TAG}
 LABEL org.opencontainers.image.authors="Tomasz Głuch <git@tomaszgluch.pl>"
 
-FROM alpine:${BASE_REV}
 
 RUN apk add --update --no-cache \
 	bash \
