@@ -4,7 +4,35 @@ This is an image containing a set of popular utilities for debugging networks in
 
 # Usage:
 
-## In Docker/podman/nerdctl:
+## In Docker/podman/nerdctl
+
+Interactive session with a default shell [Fish](https://fishshell.com/docs/current/tutorial.html):
+```
+docker run --rm -ti ghcr.io/tomekgl/debug-container:latest
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+root@949a8d396c81 /#
+```
+
+With a given command:
+```
+> docker run --rm -ti ghcr.io/tomekgl/debug-container:1.0.0 ping -c1 google.com
+PING google.com (2a00:1450:4001:831::200e): 56 data bytes
+64 bytes from 2a00:1450:4001:831::200e: seq=0 ttl=121 time=29.298 ms
+```
+
+With Bash shell:
+```
+docker run --rm -ti ghcr.io/tomekgl/debug-container:1.0.0 /bin/bash
+5a9eed15816a:/#
+```
+
+Running Bash one-liner:
+```
+> docker run --rm -ti ghcr.io/tomekgl/debug-container:1.0.0 /bin/bash -c 'echo $HOSTNAME && echo ${HOSTNAME^^}'
+0776f193a7b9
+0776F193A7B9
+```
 
 ## As a regular pod:
 ```
@@ -26,7 +54,7 @@ Attach to the pod with debug image:
 Targeting container "pod-under-test". If you don't see processes from this container it may be because the container runtime doesn't support this feature.
 Defaulting debug container name to debugger-25fv9.
 If you don't see a command prompt, try pressing enter.
-pod-under-test2:/# ps axuw
+pod-under-test:/# ps axuw
 PID   USER     TIME  COMMAND
     1 root      0:00 sleep 1d
     7 root      0:00 /bin/bash
