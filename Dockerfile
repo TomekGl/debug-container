@@ -13,17 +13,24 @@ LABEL org.opencontainers.image.authors="Tomasz Głuch <git@tomaszgluch.pl>"
 
 
 RUN apk add --update --no-cache \
-	bash \
-	bind-tools \
-	curl \
-	dumb-init \
-	iproute2-ss \
-        kubectl \
-	kubectl-bash-completion \
-        py3-kubernetes \
-	python3 \
-	rclone \
-	strace \
-	vim 
+      bash \
+      bind-tools \
+      curl \
+      dumb-init \
+      fish \
+      gawk \
+      git \
+      htop \
+      iperf3 \
+      iproute2-ss \
+      kubectl \
+      kubectl-bash-completion \
+      mbuffer \
+      nmap \
+      py3-kubernetes \
+      python3 \
+      rclone \
+      strace \
+      vim
 
-CMD ["/bin/bash"]
+CMD ["/usr/bin/fish"]
