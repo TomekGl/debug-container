@@ -14,6 +14,12 @@ jobs:
       - name: Set Git tag as an environment variable
         run: echo "GIT_TAG=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
 
+      - name: set lower case owner name
+        run: |
+          echo "GH_REPO_LC=${GH_REPO,,}" >>${GITHUB_ENV}
+        env:
+          GH_REPO: '${{ github.repository }}'
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
@@ -27,8 +33,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ github.sha }}
-            ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ env.GIT_TAG }}
+            ghcr.io/${{ env.GH_REPO_LC }}:${{ github.sha }}
+            ghcr.io/${{ env.GH_REPO_LC }}:latest
+            ghcr.io/${{ env.GH_REPO_LC }}:${{ env.GIT_TAG }}
           build-args: |
             GIT_TAG=${GIT_TAG}
