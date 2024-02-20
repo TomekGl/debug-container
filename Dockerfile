@@ -26,10 +26,12 @@ RUN apk add --update --no-cache \
       kubectl \
       kubectl-bash-completion \
       mbuffer \
+      mtr \
       nmap \
       py3-kubernetes \
       python3 \
       rclone \
+      screen \
       strace \
       vim
 
