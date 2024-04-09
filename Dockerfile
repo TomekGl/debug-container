@@ -31,6 +31,7 @@ RUN apk add --update --no-cache \
       py3-kubernetes \
       python3 \
       rclone \
+      rsync \
       screen \
       strace \
       vim
