@@ -1,4 +1,4 @@
-FROM alpine:3.20.3
+FROM alpine:3.21.3
 
 ARG GIT_TAG
 
@@ -15,6 +15,8 @@ LABEL org.opencontainers.image.authors="Tomasz Głuch <git@tomaszgluch.pl>"
 RUN apk add --update --no-cache \
       bash \
       bind-tools \
+      bmon \
+      bwm-ng \
       curl \
       dumb-init \
       fish \
@@ -22,6 +24,7 @@ RUN apk add --update --no-cache \
       git \
       htop \
       iperf3 \
+      iproute2 \
       iproute2-ss \
       kubectl \
       kubectl-bash-completion \
@@ -32,6 +35,8 @@ RUN apk add --update --no-cache \
       python3 \
       rclone \
       rsync \
+      tcpdump \
+      tshark \
       screen \
       strace \
       vim
