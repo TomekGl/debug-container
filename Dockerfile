@@ -1,4 +1,4 @@
-FROM alpine:3.21.3
+FROM alpine:3.22.1
 
 ARG GIT_TAG
 
@@ -26,6 +26,7 @@ RUN apk add --update --no-cache \
       iperf3 \
       iproute2 \
       iproute2-ss \
+      jq \
       kubectl \
       kubectl-bash-completion \
       mbuffer \
@@ -39,6 +40,8 @@ RUN apk add --update --no-cache \
       tshark \
       screen \
       strace \
-      vim
+      stress-ng \
+      vim \
+      wget
 
 CMD ["/usr/bin/fish"]
