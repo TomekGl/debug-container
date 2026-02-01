@@ -44,4 +44,5 @@ RUN apk add --update --no-cache \
       vim \
       wget
 
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/usr/bin/fish"]
