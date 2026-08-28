@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/TomekGl/debug-container/compare/1.8.0...1.8.1) (2026-08-28)
+
+
+### Bug Fixes
+
+* Update actions/create-github-app-token action to v3 ([#17](https://github.com/TomekGl/debug-container/issues/17)) ([fcf7ca8](https://github.com/TomekGl/debug-container/commit/fcf7ca836c3dc9f98775ed198c347f3068ffa148))
+
 ## [1.8.0](https://github.com/TomekGl/debug-container/compare/1.7.0...1.8.0) (2026-08-28)
 
 
