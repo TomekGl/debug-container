@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set Git tag as an environment variable
         run: echo "GIT_TAG=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
