@@ -4,7 +4,9 @@
     ".": {
       "release-type": "simple",
       "package-name": "debug-container",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "include-component-in-tag": false,
+      "include-v-in-tag": false
     }
   }
 }
