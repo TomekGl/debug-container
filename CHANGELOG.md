@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.1](https://github.com/TomekGl/debug-container/compare/1.8.0...1.8.1) (2026-11-18)
+
+
+### Bug Fixes
+
+* Alpine update ([#23](https://github.com/TomekGl/debug-container/issues/23)) ([40e0398](https://github.com/TomekGl/debug-container/commit/40e0398fafae43ccedac3c1aa0a7e7533f890431))
+* Update actions/create-github-app-token action to v3 ([#17](https://github.com/TomekGl/debug-container/issues/17)) ([fcf7ca8](https://github.com/TomekGl/debug-container/commit/fcf7ca836c3dc9f98775ed198c347f3068ffa148))
+
 ## [1.8.0](https://github.com/TomekGl/debug-container/compare/1.7.0...1.8.0) (2026-08-28)
 
 
